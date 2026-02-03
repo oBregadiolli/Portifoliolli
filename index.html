@@ -1,32 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Bregadiolli</title>
-    <!-- Google Fonts -->
+    <title>Sua Majestade, Rainha Manu</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Toastify CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-    <main class="container">
-        <div class="glass-panel">
-            <h1>Bem-vindo!</h1>
-            <p>Seu portfólio começa aqui.</p>
-            <button id="btn-vamo" class="glow-on-hover">CLIQUE EM MIM</button>
+    <!-- Full Screen Hero with Parallax -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up">Rainha Manu</h1>
+            <p class="subtitle fade-in-up delay-1">Soberana Absoluta do Reino dos Pequineses</p>
+            <a href="#galeria" class="btn-royal fade-in-up delay-2">Contemplar a Realeza</a>
         </div>
+    </header>
+
+    <main>
+        <!-- Modern Grid for "About" -->
+        <section class="about section-padding">
+            <div class="container grid-2">
+                <div class="text-content slide-in-left">
+                    <h2>A Linhagem Real</h2>
+                    <p class="lead">Pequineses não são apenas cães. São guardiões imperiais em corpos compactos.</p>
+                    <p>Manu não pede atenção; ela exige. Com um olhar profundo e uma postura de quem é dona do sofá (e
+                        da casa inteira), ela mantém a tradição de seus ancestrais, os lendários Cães-Leão da China
+                        antiga.</p>
+                </div>
+                <div class="image-content slide-in-right">
+                    <div class="floating-card">
+                        <img src="manu-chair.png" alt="Manu em seu trono improvisado">
+                        <div class="caption">Observando seus súditos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Masonry Gallery -->
+        <section id="galeria" class="gallery section-padding bg-light">
+            <h2 class="text-center mb-5">Momentos da Coroa</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item item-1">
+                    <img src="manu-face.png" alt="Close real da Manu">
+                    <div class="overlay">
+                        <span>O Olhar da Rainha</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-2">
+                    <img src="manu.jpg" alt="Manu descansando">
+                    <div class="overlay">
+                        <span>Descanso Real</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-3">
+                    <img src="manu-chair.png" alt="Manu escondida">
+                    <div class="overlay">
+                        <span>Estratégia Silenciosa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decrees with Glassmorphism -->
+        <section class="decrees section-padding">
+            <div class="container">
+                <h2 class="text-center text-white mb-5">Decretos Reais</h2>
+                <div class="decree-grid">
+                    <div class="decree-card glass">
+                        <div class="icon">👑</div>
+                        <h3>O Despertar</h3>
+                        <p>"O sol só nasce oficialmente quando eu abro meus olhos."</p>
+                    </div>
+                    <div class="decree-card glass">
+                        <div class="icon">🍖</div>
+                        <h3>O Banquete</h3>
+                        <p>"Petiscos não são recompensas, são tributos obrigatórios."</p>
+                    </div>
+                    <div class="decree-card glass">
+                        <div class="icon">🛋️</div>
+                        <h3>O Trono</h3>
+                        <p>"Se cabe um queixo, é um travesseiro. Se cabe eu inteira, é meu."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Toastify JS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <footer>
+        <p>&copy; 2026 O Palácio Real da Manu. Feito com ❤️ para a Rainha.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>

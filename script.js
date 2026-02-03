@@ -1,26 +1,24 @@
+// Optional: Add scroll reveal animations later if needed using Intersection Observer
+// For now, simple CSS animations handle the load.
+
 document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('btn-vamo');
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-    btn.addEventListener('click', () => {
-        Toastify({
-            text: "VAMOOOOOOOOOO 🚀",
-            duration: 3000,
-            destination: "#", // Link opcional
-            newWindow: true,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "center", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            style: {
-                // Style is handled in CSS mostly, but we can inline override here if needed
-                fontSize: "1.2rem",
-                padding: "1rem 2rem"
-            },
-            onClick: function () { } // Callback after click
-        }).showToast();
-
-        // Add a little scaling effect to the button on click JS side if needed, 
-        // though CSS active state handles most of it.
-        console.log('VAMOOOOOOOOOO acionado!');
+    // Simple scroll observer to trigger animations if we added them to sections
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
     });
 });

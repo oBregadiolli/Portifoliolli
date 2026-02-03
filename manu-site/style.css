@@ -88,7 +88,7 @@ p {
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: url('manu-face.png');
+    background-image: url('./manu-face.png');
     /* Using the close up face as hero */
     background-size: cover;
     background-position: center;
@@ -249,7 +249,7 @@ p {
    DECREES - Glassmorphism
 ------------------------------------------------------ */
 .decrees {
-    background: url('manu.jpg') no-repeat center center/cover;
+    background: url('./manu.jpg') no-repeat center center/cover;
     position: relative;
     background-attachment: fixed;
 }
